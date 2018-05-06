@@ -1,0 +1,133 @@
+html,body,div,header,h1,h2,footer,p,ul,li,span,a,dl,dt,dd,
+section,canvas,input,button,form,textarea,select{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	color: #fff;
+	box-sizing: border-box;
+}
+a{
+	text-decoration: none;
+}
+html,body {
+  height: 100%;
+  width: 100%;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  overflow: hidden;
+}
+input[type='range'] {
+	-webkit-appearance: none;
+	background-color: gray;
+	height: 8px;
+	border-radius: 15px;
+	outline: none;
+}
+/*滑块样式*/
+input[type='range']::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    height: 12px;
+    width: 12px;
+    background: #ddd;
+    border-radius: 100%;
+    border: none;
+}
+/*滑条*/
+input[type='range']::-moz-range-track{
+    height: 8px;
+    background: gray;
+    border-radius: 15px;
+    border: none;
+}
+input[type='range']::-moz-range-thumb{
+    height: 12px;
+    width: 12px;
+    background: #ddd;
+    border: none;
+    border-radius: 100%;
+}
+header,.right{
+	/*布局采用绝对定位*/
+	position: absolute;
+}
+header{
+	left: 0px;
+	top: 0px;
+	right: 0px;
+	height: 150px;
+	z-index: 10;
+	/*background-color: white;*/
+	/*color: black;*/
+}
+header button#add{
+	display: block;
+	color: white;
+	background-color: black;
+	margin: 10px auto;
+	height: 50px;
+	font-size: 30px;
+	border-radius: 5px;
+	padding: 0 5px;
+}
+header input#loadfile{
+	display: none;
+}
+ul.type{
+	display: inline-block;
+	border: solid #fff 1px;
+	cursor: pointer;
+	margin-bottom: 10px;
+	border-radius: 5px;
+}
+ul.type li{
+	float: left;
+	height: 30px;
+	line-height: 30px;
+	width: 80px;
+}
+.right{
+	/*top: 150px;*/
+	top: 0px;
+	left: 0px;
+	bottom: 0px;
+	right: 0px;
+}
+.selected{
+	color: green;
+}
+.selectedType{
+	color: #000;
+	background-color: #fff;
+}
+
+/*媒体查询*/
+@media screen and (max-width:800px),screen and (max-height:500px){
+	body{
+		font-size: 12px;
+	}
+	header{
+		height: 85px;
+	}
+	header h1{
+		font-size: 24px;
+		height: 34px;
+		line-height: 34px;
+	}
+	header button#add{
+		font-size: 20px;
+		height: 25px;
+		width: 40%;
+	}
+	ul.type{
+		margin-bottom: 2px;
+	}
+	ul.type li{
+		height: 19px;
+		line-height: 19px;
+	}
+	.right{
+		/*top:85px;*/
+	}
+}
